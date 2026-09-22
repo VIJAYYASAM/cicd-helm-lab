@@ -25,7 +25,7 @@ spec:
               value: {{ .Values.image.tag | quote }}
           readinessProbe:
             httpGet:
-              path: /wrong
+              path: /healthz
               port: 8080
             initialDelaySeconds: 3
             periodSeconds: 5
